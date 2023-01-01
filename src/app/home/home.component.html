@@ -2,3 +2,5 @@
 <p>Hello: {{name}}</p>
 <input type="text" value="{{name}}">
 <input type="text" [value]="name" [title]="name">
+<p *ngIf="age >= 50">You are old</p>
+<p *ngIf="age < 50">You are young</p>
