@@ -1,6 +1,11 @@
 <p>home works!</p>
 <p>Hello: {{name}}</p>
-<input type="text" [(ngModel)]="name" [title]="name">
-<p *ngIf="age >= 50">You are old</p>
-<p *ngIf="age < 50">You are young</p>
+<input type="text" [(ngModel)]="age" [title]="age">
+<!-- <input type="text" [(ngModel)]="name" [title]="name"> -->
+<!-- <p *ngIf="age >= 50">You are old</p>
+<p *ngIf="age < 50">You are young</p> -->
+<div *ngIf="age <= 18; then young; else old"></div>
+<ng-template #young><b>You are young</b></ng-template>
+<ng-template #old><b>You are old</b></ng-template>
+<br>
 <button (click)="resetName()">Reset name</button>
