@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public name = 'Khuong';
   public age = 18;
-  public traiCay = ['s','d'];
-
+  public user = [
+    {
+      name: 'Victor Nguyen',
+      age: 23,
+    },
+    {
+      name: 'Victor Nguyen 2',
+      age: 10,
+    },
+  ];
 
   public resetName(): void {
     this.name = '';
@@ -17,6 +25,5 @@ export class HomeComponent implements OnInit {
 
   constructor() {}
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 }
