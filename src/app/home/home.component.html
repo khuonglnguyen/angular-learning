@@ -1,10 +1,10 @@
 <p>home works!</p>
-<p>Hello: {{ name }}</p>
+<!-- <p>Hello: {{ name }}</p>
 <ul *ngFor="let item of user; let i = index">
   <li>{{ i + 1 }}. {{ item }}</li>
-</ul>
+</ul> -->
 <br />
-<table class="table-data">
+<!-- <table class="table-data">
   <tr>
     <th>#</th>
     <th>Name</th>
@@ -17,4 +17,13 @@
     <td [ngClass]="{ age: item.age >= 18 }">{{ item.age }}</td>
     <td><span *ngIf="item.age >= 18"> OK </span></td>
   </tr>
-</table>
+</table> -->
+City: <select name="city" id="city" (change)="selectedData($event)">
+  <option value="{{item.city}}" *ngFor="let item of cities" >{{item.city}}</option>
+</select>
+<br>
+District: <select name="district" id="district">
+  <option value="{{item}}" *ngFor="let item of districts">{{item}}</option>
+</select>
+
+<p onclick=""></p>
