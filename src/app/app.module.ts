@@ -7,12 +7,16 @@ import { HomeComponent } from './home/home.component';
 
 import { FormsModule } from '@angular/forms';
 import { TestPipe } from './test.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TestPipe
+    TestPipe,
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
