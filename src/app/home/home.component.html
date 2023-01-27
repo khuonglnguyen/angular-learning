@@ -1,4 +1,4 @@
-<h1>Home</h1>
+<h1 [appHighLight]="color">Home</h1>
 <!-- <p>Hello: {{ name }}</p>
 <ul *ngFor="let item of user; let i = index">
   <li>{{ i + 1 }}. {{ item }}</li>
@@ -18,12 +18,16 @@
     <td><span *ngIf="item.age >= 18"> OK </span></td>
   </tr>
 </table> -->
-City: <select name="city" id="city" (change)="selectedData($event)">
-  <option value="{{item.city}}" *ngFor="let item of cities" >{{item.city}}</option>
+City:
+<select name="city" id="city" (change)="selectedData($event)">
+  <option value="{{ item.city }}" *ngFor="let item of cities">
+    {{ item.city }}
+  </option>
 </select>
-<br>
-District: <select name="district" id="district">
-  <option value="{{item}}" *ngFor="let item of districts">{{item}}</option>
+<br />
+District:
+<select name="district" id="district">
+  <option value="{{ item }}" *ngFor="let item of districts">{{ item }}</option>
 </select>
 
 <p onclick=""></p>
