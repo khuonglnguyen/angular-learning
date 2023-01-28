@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ export class HomeComponent implements OnInit {
   public color = 'red';
   public name = 'Khuong';
   public age = 18;
+  public counter = 0;
+  public binhPhuong = 0;
   public user = [
     {
       name: 'Victor Nguyen',
@@ -46,7 +49,11 @@ export class HomeComponent implements OnInit {
     this.name = '';
   }
 
-  constructor() {}
+  constructor(private common: CommonService) {}
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.counter = this.common.getCounter();
+    this.binhPhuong = this.common.binhPhuong(this.counter);
+    this.common.setCounter(++this.counter);
+  }
 }
