@@ -10,6 +10,7 @@ import { TestPipe } from './test.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
 import { HighLightDirective } from './Directives/high-light.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HighLightDirective } from './Directives/high-light.directive';
     TestPipe,
     PageNotFoundComponent,
     AboutComponent,
-    HighLightDirective
+    HighLightDirective,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
