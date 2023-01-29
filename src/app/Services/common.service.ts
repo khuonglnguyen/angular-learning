@@ -18,5 +18,9 @@ export class CommonService {
     this.counter = n;
   }
 
+  public submitData(data: any): void {
+    alert('Data is sent to server: ' + data);
+  }
+
   constructor() {}
 }
