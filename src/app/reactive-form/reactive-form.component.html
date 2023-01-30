@@ -1,0 +1,21 @@
+<p>reactive-form works!</p>
+Form 1
+<form [formGroup]="formData1" (ngSubmit)="onSubmit()">
+    Name:
+    <input
+      type="text"
+      formControlName="name"
+    />
+    <button>Submit</button>
+  </form>
+  Form 2
+  <form [formGroup]="formData2" (ngSubmit)="onSubmit()">
+      Name:
+      <input
+        type="text"
+        formControlName="name"
+      />
+      <button [disabled]="!formData2.valid">Submit</button>
+    </form>
+    <span style="color: red" *ngIf="!formData2.valid">Name is not empty!</span>
+  
